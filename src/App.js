@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CheckboxList from './list'
-
+import WebBrowser from './webBrowser'
 
 class App extends Component {
   render() {
@@ -15,7 +15,12 @@ class App extends Component {
         <p className="App-intro">
           Hello Electron!
         </p>
-        <CheckboxList/>
+        <div style={{display:"flex", flexDirection:"row"}}>
+          <CheckboxList/>
+          <WebBrowser/>
+        </div>
+
+
       </div>
 
     );

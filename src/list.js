@@ -3,15 +3,12 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-
 import ListItemText from '@material-ui/core/ListItemText';
-
 import FolderIcon from '@material-ui/icons/Folder';
 
-let sites = ["https://www.youtube.com", "https://www.google.com", "https://www.facebook.com", "https://www.tumblr.com","https://www.youtube.com", "https://www.google.com",
-"https://www.facebook.com", "https://www.tumblr.com","https://www.youtube.com", "https://www.google.com", "https://www.facebook.com", "https://www.tumblr.com"]
+let sites = ["https://www.youtube.comhttps://www.youtube.comhttps://www.youtube.com", "https://www.google.com", "https://www.facebook.com", "https://www.tumblr.com","https://www.youtube.com", "https://www.google.com",
+"https://www.facebook.com", "https://www.tumblr.com", "https://www.tumblr.com", "https://www.tumblr.com", "https://www.tumblr.com", "https://www.tumblr.com", "https://www.tumblr.com", "https://www.tumblr.com", "https://www.tumblr.com","https://www.youtube.com", "https://www.google.com", "https://www.facebook.com", "https://www.tumblr.com"]
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -24,14 +21,6 @@ const styles = theme => ({
     margin: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 2}px`,
   },
 });
-
-function generate(element) {
-  return sites.map(value =>
-    React.cloneElement(element, {
-      key: value,
-    })
-  );
-}
 
 function generateListItems(){
   return sites.map(value => (
@@ -52,7 +41,7 @@ class InteractiveList extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root}>
+      <div className={classes.root} style={{width:"40%", height:"100%", overflow:"scroll"}} >
               <List dense={true}>
                 {generateListItems()}
               </List>
