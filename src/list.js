@@ -7,7 +7,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import FolderIcon from '@material-ui/icons/Folder';
 
-let sites = ["https://www.youtube.comhttps://www.youtube.comhttps://www.youtube.com", "https://www.google.com", "https://www.facebook.com", "https://www.tumblr.com","https://www.youtube.com", "https://www.google.com",
+let sites = [ "https://www.google.com", "https://www.facebook.com", "https://www.tumblr.com","https://www.youtube.com", "https://www.google.com",
 "https://www.facebook.com", "https://www.tumblr.com", "https://www.tumblr.com", "https://www.tumblr.com", "https://www.tumblr.com", "https://www.tumblr.com", "https://www.tumblr.com", "https://www.tumblr.com", "https://www.tumblr.com","https://www.youtube.com", "https://www.google.com", "https://www.facebook.com", "https://www.tumblr.com"]
 const styles = theme => ({
   root: {
@@ -41,7 +41,7 @@ class InteractiveList extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root} style={{width:"40%", height:"100%", overflow:"scroll"}} >
+      <div className={classes.root} style={{width:"40%", height:"600px", overflow:"scroll"}} >
               <List dense={true}>
                 {generateListItems()}
               </List>

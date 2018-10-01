@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import render from 'react-dom';
+
 
 class WebBrowser extends Component {
   render(){
@@ -7,7 +7,6 @@ class WebBrowser extends Component {
       <webview
         style={{width: "100%"}}
     src="https://www.google.com"
-    allowpopups
   />
   )}
 }
