@@ -12,7 +12,8 @@
     "@material-ui/icons": "^3.0.1",
     "electron-reload": "^1.2.5",
     "react": "^16.1.1",
-    "react-dom": "^16.1.1"
+    "react-dom": "^16.1.1",
+    "react-split-pane": "^0.1.84"
   },
   "homepage": "./",
   "main": "src/electron-starter.js",

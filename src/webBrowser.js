@@ -6,7 +6,7 @@ class WebBrowser extends Component {
     return (
       <webview
         style={{width: "100%"}}
-    src="https://www.google.com"
+    src={this.props.url}
   />
   )}
 }
