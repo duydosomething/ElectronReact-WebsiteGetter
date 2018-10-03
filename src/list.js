@@ -36,12 +36,12 @@ function generateListItems(){
 )
 }
 
-class InteractiveList extends React.Component {
+class CheckboxList extends React.Component {
 
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root} style={{width:"40%", height:"600px", overflow:"scroll"}} >
+      <div className={classes.root} style={{ height:"600px", overflow:"scroll"}} >
               <List dense={true}>
                 {generateListItems()}
               </List>
@@ -50,8 +50,8 @@ class InteractiveList extends React.Component {
   }
 }
 
-InteractiveList.propTypes = {
+CheckboxList.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(InteractiveList);
+export default withStyles(styles)(CheckboxList);
