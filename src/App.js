@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import CheckboxList from './list';
-import WebBrowser from './webBrowser';
-import InputForm from './inputForm';
+import CheckboxList from './components/list';
+import WebBrowser from './components/webBrowser';
+import InputForm from './components/inputForm';
 
 class App extends Component {
   render() {
