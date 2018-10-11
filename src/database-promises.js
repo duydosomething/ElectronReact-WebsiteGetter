@@ -20,8 +20,8 @@ class DatabasePromises {
     return this.users2.find({})
   }
 
-  async delete(item){
-    let result = await this.users2.remove({name: item.name});
+  async delete(id){
+    let result = await this.users2.remove({_id: id});
     this.users2.persistence.compactDatafile();
     return result
 

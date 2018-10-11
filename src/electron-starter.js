@@ -72,5 +72,19 @@ ipcMain.on('insert', (event, site) => {
   let inserted = sites.insert(site);
   inserted.then( doc => {
     event.sender.send('site:added', doc._id);
-  })
+  });
+})
+
+ipcMain.on('delete', (event, siteId) =>{
+  let deleted = sites.delete(siteId);
+  deleted.then( doc => {
+    event.sender.send('site:deleted', doc._id);
+  });
+})
+
+ipcMain.on('fetchSites', (event) => {
+  let fetchedSites = sites.findAll();
+  fetchedSites.then( docs => {
+    event.sender.send('fetched:sites', docs);
+  });
 })
