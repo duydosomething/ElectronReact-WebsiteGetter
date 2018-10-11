@@ -2,6 +2,7 @@ const electron = require('electron');
 // Module to control application life.
 //
 const database = require('./database-promises');
+sites = database('sites');
 const { app, BrowserWindow, ipcMain } = electron;
 //const app = electron.app;
 // Module to create native browser window.
@@ -62,5 +63,14 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-
+// Databse (nedb)
 // ipcMain
+
+// using event.sender because there is only one window
+// if there was another window i would use mainWindow.webContents
+ipcMain.on('insert', (event, site) => {
+  let inserted = sites.insert(site);
+  inserted.then( doc => {
+    event.sender.send('site:added', doc._id);
+  })
+})

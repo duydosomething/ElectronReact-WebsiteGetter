@@ -1,9 +1,10 @@
 const Datastore = require('nedb-promises')
 
 class DatabasePromises {
-  constructor() {
+  constructor(dbName) {
     // this.users2 = Datastore.create({ filename: 'users2.db', autoload: true });
-    this.users2 = Datastore.create('./users2.db');
+    this.dbName = dbName;
+    this.users2 = Datastore.create(`./${this.dbName}.db`);
 
   }
 
