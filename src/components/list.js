@@ -42,10 +42,10 @@ class CheckboxList extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.root} style={{ height:"600px", overflow:"scroll"}} >
-              <List dense={true}>
-                {generateListItems()}
-              </List>
-            </div>
+        <List dense={true}>
+          {generateListItems()}
+        </List>
+      </div>
     );
   }
 }
